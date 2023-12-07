@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Export Default</title>
+</head>
+<body>
+  <script type="module">
+
+    import sayHelloDefault from "../uji-coba-javascript-module/exportDefault.js"
+    import nameDefault from "../uji-coba-javascript-module/exportDefaultVariable.js"
+    import Person from "../uji-coba-javascript-module/exportDefaultClass.js"
+    import authorNamed, {content, title} from "../uji-coba-javascript-module/exportDefaultnamed.js"
+
+    sayHelloDefault("Syahrin")
+    console.log(nameDefault)
+
+    const person = new Person("Syahrin")
+    person.sayHi()
+    
+    console.log(authorNamed)
+    console.log(content)
+    console.log(title)
+
+  </script>
+</body>
+</html>
