@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alias</title>
+</head>
+<body>
+  <script type="module">
+    import {company, sum, Company} from "../uji-coba-javascript-module/alias.js"
+    import {company as perusahaan, Company as Perusahaan, sum as total} from "../uji-coba-javascript-module/alias2.js"
+
+    console.log(company)
+    console.log(perusahaan)
+    console.log(sum(10,10))
+    console.log(total(11,11))
+
+  const a = new Company()
+  const b = new Perusahaan()
+
+  </script>
+</body>
+</html>
