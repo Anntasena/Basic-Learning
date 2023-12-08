@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module Object</title>
+</head>
+<body>
+  <script type="Module">
+    import * as Module from "../uji-coba-javascript-module/moduleObject.js" 
+
+    console.log(Module.firstName)
+    console.log(Module.middleName)
+    console.log(Module.lastName)
+
+    Module.hello()
+
+    const person = new Module.Person()
+    console.log(person.name)
+  </script>
+</body>
+</html>

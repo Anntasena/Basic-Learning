@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aggregate Module</title>
+</head>
+<body>
+  <script type="module">
+    import {Person, sayHello, sayGoodbye, sum} from "../uji-coba-javascript-module/aggregate.js"
+
+    const person = new Person("Syahrin")
+    person.sayHello("Fajar")
+
+    sayHello("Mamat")
+    sayGoodbye("Matlail")
+
+    console.log(sum(10,10))
+
+  </script>
+</body>
+</html>
