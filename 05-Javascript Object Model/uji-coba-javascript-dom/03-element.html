@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element</title>
+</head>
+<body>
+  <div id="content" class="content">
+    
+    <h1 id="title" class="title">This is title</h1>
+    <p id="description" class="description">This is description</p>
+   
+    
+  </div>
+   <div id="createElement" class="createElement"></div>
+
+  <script>
+
+  // const title = document.getElementById("title")
+  // title.textContent = "Belajar Javascript DOM"
+
+  // const description = document.getElementById("description")
+  // description.textContent = "Selamat B  elajar Javacript DOM"
+
+  const content = document.getElementById("content")
+
+  console.log(content.id)
+  console.log(content.className)
+  console.log(content.tagName)
+
+  const description = document.getElementById("description")
+  const title = document.getElementById("title")
+
+  // description.remove()
+  // title.remove()
+
+  const createElement = document.getElementById("createElement")
+  
+  const createTitle = document.getElementById("h1")
+  createTitle.textContent = "Belajar DOM"
+
+  createElement.appendChild(createTitle)
+
+  </script>
+
+
+</body>
+</html>

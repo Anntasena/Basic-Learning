@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NodeList</title>
+</head>
+<body>
+
+  <ul id="menu1">
+    <li id="first">first</li>
+    <li id="second">second</li>
+    <li id="third">third</li>
+  </ul>
+
+  <ul id="menu2">
+    <li>Syahrin</li>
+    <li>Matlail</li>
+    <li>Fajri</li>
+  </ul>
+
+  <script>
+    const list = document.querySelectorAll("li")
+    console.log(list)
+
+    const list1 = document.getElementById("menu1").childNodes
+    console.log(list1)
+
+    const list2 = document.getElementById("menu2").childNodes
+    console.log(list2)
+
+    const menu1 = document.getElementById("menu1")
+    const list01 = menu1.childNodes
+
+    menu1.append(document.createElement("li"))
+    menu1.append(document.createElement("li"))
+
+    console.log(list01)
+  </script>
+  
+</body>
+</html>

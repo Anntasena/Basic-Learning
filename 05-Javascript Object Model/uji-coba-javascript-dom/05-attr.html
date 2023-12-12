@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attr / Attribute</title>
+</head>
+<body>
+  <img id="logo" src="https://www.programmerzamannow.com/img/pzn.png" alt="PZN Logo">
+  <img id="logo1">
+  
+  <script>
+    // const logo = document.getElementById("logo")
+    const src = logo.getAttributeNode("src")
+
+    console.log(src.name)
+    console.log(src.value)
+
+
+    // const logo1 = document.getElementById("logo1")
+    // const src1 = document.getElementById("src1")
+    // src1.value = "https://www.programmerzamannow.com/img/pzn.png"
+
+    logo1.setAttribute("src1", "https://www.programmerzamannow.com/img/pzn.png")
+  </script>
+
+</body>
+</html>
