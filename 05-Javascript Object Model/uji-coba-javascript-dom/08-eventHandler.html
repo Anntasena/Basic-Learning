@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Handler</title>
+</head>
+<body>
+  
+  <input id="clickMe" type="button" value="Click Me"/>
+
+  <script>
+  
+  const clickMe = document.getElementById("clickMe")
+
+  // kode: Event Target
+  // clickMe.addEventListener("click", function () {
+  //   clickMe.setAttribute("value", "You Already Click Me!")
+  // })
+
+  // Kode: Global Event Target
+  clickMe.onclick = function () {
+    clickMe.setAttribute("Value", "You Already Click Me in Global Event Target!")
+  }
+
+  clickMe.addEventListener("click", function () {
+    console.log("Button telah di click")
+  })
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextContent dan InnerHTML</title>
+</head>
+<body>
+  <p id="content">
+    <script>
+      console.log("Hello World")
+    </script>
+    <b>Syahrin</b> Matlail <i>Fajri</i>
+  </p>
+  
+  <script>
+
+    const content = document.getElementById("content")
+    console.log(content.textContent)
+    console.log(content.innerText)
+    console.log(content.innerHTML);
+
+    content.textContent = "<h1>This is Title</h1><p>This is Description</P>"
+    content.innerHTML = "<h1>This is Title</h1><p>This is Description</P>"
+
+  </script>
+
+</body>
+</html>
