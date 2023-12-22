@@ -1,0 +1,33 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Callback</title>
+    </head>
+    <body>
+
+        <h1 id="header1"></h1>
+
+        <script>
+            // Kode: setTimeout
+            const addElement = () => {
+                const header = document.createElement("h1");
+                header.textContent = "Anonymcode"
+
+                document.body.appendChild(header)
+            };
+
+            setTimeout(addElement, 5000) // program akan muncul setelah 5 detik
+
+            // Kode: setInterval
+            const setTime = () => {
+              const header1 = document.getElementById("header1")
+              header1.textContent = new Date().toString()
+
+              // document.body.appendChild(header1) ==> tidak perlu di append karna sudah ada di headernya
+            }
+
+            setInterval(setTime, 1000)
+        </script>
+    </body>
+</html>

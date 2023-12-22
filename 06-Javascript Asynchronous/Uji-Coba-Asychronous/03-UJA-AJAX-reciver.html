@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX Reciver</title>
+</head>
+<body>
+
+  <h1 id="response"></h1>
+
+  <script>
+    // ajax.onload = callback // menggunakan onlaod
+    const ajax = new XMLHttpRequest()
+    ajax.open("GET", "api/hello.json")
+    ajax.addEventListener("load", function () {
+      const json = JSON.parse(ajax.responseText)
+      const header = document.getElementById("response")
+      response.textContent = json.response
+      document.body.appendChild(response)
+    })
+
+    ajax.send()
+  </script>
+  
+</body>
+</html>
