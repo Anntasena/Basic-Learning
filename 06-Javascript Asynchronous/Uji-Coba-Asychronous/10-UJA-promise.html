@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise</title>
+</head>
+<body>
+  <script>
+    // AJAX dengan promise
+    function getProduct() {
+
+      return new Promise(function(resolve, reject) {
+        const ajax = new XMLHttpRequest()
+        ajax.open("GET", "api/hello.json")
+        ajax.onload = function () {
+          if (ajax.status === 200) {
+            resolve(JSON.parse(ajax.responseText))
+          } else {
+            reject(ajax.responseText)
+          }
+        }
+        ajax.send()
+      })
+    }
+
+
+    // Kode: Promise
+    // const promise = new Promise(function (resolve, reject) {
+    //   if(success) {
+    //     resolve(value)
+    //   } else {
+    //     reject(error)
+    //   }
+    // })
+  </script>
+</body>
+</html>
