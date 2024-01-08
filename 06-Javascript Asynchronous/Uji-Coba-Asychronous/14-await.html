@@ -1,0 +1,53 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Await</title>
+    </head>
+    <body>
+        <script>
+            // Promise<JSON Product>
+            async function getProduct() {
+                const request = new Request("api/product.json", {
+                    method: "GET",
+                });
+
+                try {
+                    const response = await fetch(request);
+
+                    if (!response.ok) {
+                        throw new Error(
+                            `HTTP error! Status: ${response.status}`
+                        );
+                    }
+
+                    const product = await response.json();
+                    return product;
+                } catch (error) {
+                    console.error("Error fetching product:", error.message);
+                }
+            }
+
+            function getProductNamePromise() {
+                return new Promise(function (resolve, reject) {
+                    getProduct()
+                        .then((product) => resolve(product.name))
+                        .catch((error) => reject(error));
+                });
+            }
+
+            async function getProductAsync() {
+                const product = await getProduct();
+                return product.name;
+            }
+
+            // Menggunakan .then() untuk menangkap hasil Promise
+            getProductNamePromise()
+              .then((productName) => console.log(productName));
+
+            // Menggunakan await atau .then() untuk menangkap hasil Promise
+            getProductAsync()
+              .then((productName) => console.log(productName));
+        </script>
+    </body>
+</html>

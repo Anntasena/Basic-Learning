@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Worker</title>
+</head>
+<body>
+  <button id="buttonTask">Click Me!</button>
+
+  <script>
+
+    function showLog (total) {
+      for (let i =0; i < total; i++) {
+        console.log(i)
+      }
+    }
+
+    document.getElementById("buttonTask").onclick = function () {
+      console.log("Start Log")
+      showLog(2000)
+      console.log("End Log")
+    }
+
+  </script>
+</body>
+</html>

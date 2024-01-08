@@ -10,3 +10,11 @@
 /*
   *Ada di 11-UJA-promise-method.html
 */
+
+// Promise Static Mehtod
+/*
+  > Promise juga memiliki berberpaa static method
+    - Promise.all() ==> digunakan untuk mengesekusi berberapa promise sekaligus dan menunggu semua hasil promise nya
+    - Promise.any() ==> digunakan untuk mengesekusi berberapa promise sekaligus dan mengambil hasil paling cepat
+    - Dan lain-lain
+*/
